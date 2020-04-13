@@ -1,4 +1,5 @@
 ﻿using Adapter;
+using DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using DesignPatterns.CreationalPatterns.Factory;
 using DesignPatterns.CreationalPatterns.Factory.implementation;
 using DesignPatterns.CreationalPatterns.Singleton;
@@ -94,7 +95,34 @@ namespace DesignPatterns
             Console.Read();
             #endregion
             #endregion
-           
+            #region Behavioral Patterns Calling
+            #region Chain Of Responsibility
+            // Setup Chain of Responsibility
+
+            //Approver Waqas = new Director();
+            //Approver Azeem = new VicePresident();
+            //Approver Raheel = new President();
+
+            //Waqas.SetSuccessor(Azeem);
+            //Azeem.SetSuccessor(Raheel);
+
+            //// Generate and process purchase requests
+
+            //Purchase pr = new Purchase(2034, 350.00, "Assets");
+            //Waqas.ProcessRequest(pr);
+
+            //pr = new Purchase(2035, 32590.10, "Servers");
+            //Waqas.ProcessRequest(pr);
+
+            //pr = new Purchase(2036, 122100.00, "Property");
+            //Waqas.ProcessRequest(pr);
+
+            //// Wait for user
+
+            //Console.ReadKey();
+            #endregion
+            #endregion
+
         }
         //for adapter pattern
         public void getJson()

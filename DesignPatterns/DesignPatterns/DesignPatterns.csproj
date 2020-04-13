@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BehavioralPatterns\ChainOfResponsibility\Approver.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibility\Director.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibility\President.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibility\Purchase.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibility\VicePresident.cs" />
     <Compile Include="CreationalPatterns\Factory\implementation\Truck.cs" />
     <Compile Include="CreationalPatterns\Factory\implementation\Car.cs" />
     <Compile Include="CreationalPatterns\Factory\interface\IVehicle.cs" />
@@ -65,8 +70,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BehavioralPatterns\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
