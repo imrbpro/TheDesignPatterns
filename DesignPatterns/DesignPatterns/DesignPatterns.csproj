@@ -51,9 +51,10 @@
     <Compile Include="BehavioralPatterns\ChainOfResponsibility\President.cs" />
     <Compile Include="BehavioralPatterns\ChainOfResponsibility\Purchase.cs" />
     <Compile Include="BehavioralPatterns\ChainOfResponsibility\VicePresident.cs" />
-    <Compile Include="CreationalPatterns\Factory\implementation\Truck.cs" />
-    <Compile Include="CreationalPatterns\Factory\implementation\Car.cs" />
-    <Compile Include="CreationalPatterns\Factory\interface\IVehicle.cs" />
+    <Compile Include="CreationalPatterns\Factory\implementation\DebitCard.cs" />
+    <Compile Include="CreationalPatterns\Factory\implementation\GoldCard.cs" />
+    <Compile Include="CreationalPatterns\Factory\implementation\PlatinumCard.cs" />
+    <Compile Include="CreationalPatterns\Factory\interface\IPaymentCard.cs" />
     <Compile Include="CreationalPatterns\Singleton\SingletonDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

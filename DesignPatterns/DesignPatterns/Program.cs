@@ -1,7 +1,7 @@
 ﻿using Adapter;
 using DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 using DesignPatterns.CreationalPatterns.Factory;
-using DesignPatterns.CreationalPatterns.Factory.implementation;
+using DesignPatterns.CreationalPatterns.Factory.Implementation;
 using DesignPatterns.CreationalPatterns.Singleton;
 using DesignPatterns.StructuralPatterns.Adapter;
 using DesignPatterns.StructuralPatterns.Decorator;
@@ -38,24 +38,29 @@ namespace DesignPatterns
             //Console.ReadLine();
             #endregion
             #region Factory
-            //Console.WriteLine("Enter Vehicle type");
-            //string vehicletype = Console.ReadLine();
-            //IVehicle vehicle = GetVehicle(vehicletype);
-            //vehicle.start();
-            //vehicle.stop();
-            //Console.ReadKey();
-            //IVehicle GetVehicle(string vehicleName)
-            //{
-            //    switch (vehicleName)
-            //    {
-            //        case "Car":
-            //            return new Car();
-            //        case "Truck":
-            //            return new Truck();
-            //        default:
-            //            throw new Exception("No such vehicle found");
-            //    }
-            //}
+            IPaymentCard card = null;
+            Console.WriteLine("Please Select your card type");
+            string choice = Console.ReadLine();
+            switch (choice.ToLower())
+            {
+                case "debit":
+                    card = new DebitCard();
+                    PrintCardDetails(card);
+                    break;
+                case "gold":
+                    card = new GoldCard();
+                    PrintCardDetails(card);
+                    break;
+                case "platinum":
+                    card = new PlatinumCard();
+                    PrintCardDetails(card);
+                    break;
+                default:
+                    card = null;
+                    PrintCardDetails(card);
+                    break;
+            }
+
             #endregion
             #endregion
             #region Structural Patterns Calling
@@ -90,9 +95,9 @@ namespace DesignPatterns
             //Console.ReadKey();
             #endregion
             #region Adapter
-            Program p = new Program();
-            p.getJson();
-            Console.Read();
+            //Program p = new Program();
+            //p.getJson();
+            //Console.Read();
             #endregion
             #endregion
             #region Behavioral Patterns Calling
@@ -123,6 +128,21 @@ namespace DesignPatterns
             #endregion
             #endregion
 
+        }
+        public static void PrintCardDetails(IPaymentCard card)
+        {
+            if (card != null)
+            {
+                Console.WriteLine("Card Type is : " + card.GetCardType());
+                Console.WriteLine("Card Expiry is : " + card.Validity());
+                Console.WriteLine("Card Annual Renewal Charges are  : " + card.AnnualCharges());
+                Console.WriteLine("Card Limit is  : " + card.CardLimit());
+            }
+            else
+            {
+                Console.WriteLine("Invalid Card Type...");
+            }
+            Console.Read();
         }
         //for adapter pattern
         public void getJson()
